@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OnlineBookStore.MainPage"
+             Title="Login"
+             BackgroundColor="WhiteSmoke">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Button CornerRadius="25" FontAttributes="Bold" FontSize="24" BackgroundColor="Gray" TextColor="White" Text="Login" VerticalOptions="EndAndExpand" Clicked="Button_Clicked" />
+        <Button CornerRadius="25" FontAttributes="Bold" FontSize="24" BackgroundColor="Gray" TextColor="White" Text="Sign up" VerticalOptions="StartAndExpand" Clicked="Button_Clicked_1"  />
+
+
+        <Button CornerRadius="25" FontAttributes="Bold" FontSize="20" BackgroundColor="Transparent" TextColor="Yellow" Text="Share with your Frnds" HorizontalOptions="Center" VerticalOptions="Center" Margin="40" Clicked="Button_Clicked_2" />
+
+    </StackLayout>
+
+</ContentPage>

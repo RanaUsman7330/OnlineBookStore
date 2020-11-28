@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OnlineBookStore.StartPage.ADMIN.UsersList">
+    <ContentPage.Content>
+         <StackLayout Padding="25">
+            <ListView x:Name="DataList">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" Detail="{Binding Email}">
+                            <TextCell.ContextActions>
+                                <MenuItem Text="View" Clicked="MenuItem_ClickedView" CommandParameter="{Binding .}" />
+                                <MenuItem Text="Edit" Clicked="MenuItem_ClickedEdit" CommandParameter="{Binding .}" />
+                                <MenuItem Text="Delete" Clicked="MenuItem_ClickedDelete" CommandParameter="{Binding .}" />
+                            </TextCell.ContextActions>
+                        </TextCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout  Padding="20" Spacing="18">
+                
+                <Entry IsVisible="false" PlaceholderColor="Black" Placeholder="Enter UserName" x:Name="txtName" ReturnType="Next" />
+                <Entry IsVisible="false"  PlaceholderColor="Black" Placeholder="Enter Email" Keyboard="Email" x:Name="txtEmail" ReturnType="Next"/>
+                <Entry IsVisible="false"  PlaceholderColor="Black" IsPassword="True" Placeholder="Enter Password" x:Name="txtPass" ReturnType="Next" />
+                <Entry IsVisible="false"  PlaceholderColor="Black" Placeholder="Enter Phone Number" Keyboard="Numeric" x:Name="txtPhone" ReturnType="Done" />
+                <Button  IsVisible="false"   CornerRadius="20" Text="Update" Clicked="BtnUpdate_Clicked" x:Name="BtnUpdate" />
+
+
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

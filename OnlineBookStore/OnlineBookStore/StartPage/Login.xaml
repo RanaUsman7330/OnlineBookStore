@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OnlineBookStore.StartPage.Login"
+             Title="Login"
+             BackgroundColor="WhiteSmoke">
+    <ContentPage.Content>
+        <StackLayout Padding="24" Spacing="24">
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Login" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <StackLayout Orientation="Horizontal" Spacing="0">
+                <Image Source="username" WidthRequest="40" HeightRequest="50"/>
+
+
+                <Entry PlaceholderColor="Black" Placeholder="Enter Your Gmail" x:Name="txtName" HorizontalOptions="FillAndExpand" ReturnType="Next"  />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Spacing="0">
+                <Image Source="Pass" WidthRequest="40" HeightRequest="50"/>
+
+                <Entry IsPassword="True" PlaceholderColor="Black" Placeholder="Enter Your Password" x:Name="txtPass" HorizontalOptions="FillAndExpand" ReturnType="Done" />
+            </StackLayout>
+            <Button  CornerRadius="20" Text="Login" Clicked="Button_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
